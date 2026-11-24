@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block titulo %}Catálogo | Herbo Natura{% endblock %}
+{% block descripcion %}Catálogo de hierbas y productos naturales de Herbo Natura{% endblock %}
+
+{% block contenido %}
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-4">
+        <div>
+            <h1 class="h2">Nuestros productos naturales</h1>
+            <p class="text-body-secondary mb-0">Descubre nuestra selección de hierbas y productos naturales.</p>
+        </div>
+        <span class="badge text-bg-success fs-6">Productos disponibles: {{ disponibles }}</span>
+    </div>
+
+    <form class="row g-2 mb-4" method="GET">
+        <div class="col-sm">
+            <label class="visually-hidden" for="buscar">Buscar una hierba</label>
+            <input class="form-control" id="buscar" type="search" name="buscar"
+                   placeholder="Buscar una hierba..." value="{{ buscar }}">
+        </div>
+        <div class="col-sm-auto">
+            <button class="btn btn-success w-100" type="submit">
+                <i class="bi bi-search"></i> Buscar
+            </button>
+        </div>
+    </form>
+
+    <div class="row g-3">
+        {% for producto in productos %}
+            <div class="col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge text-bg-light mb-2">{{ producto.categoria }}</span>
+                        <h2 class="card-title h5">{{ producto.nombre }}</h2>
+                        <p class="card-text">{{ producto.descripcion }}</p>
+                    </div>
+                    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                        <strong class="text-success">${{ producto.precio }}</strong>
+                        {% if producto.stock > 0 %}
+                            <span class="small text-body-secondary">Disponible: {{ producto.stock }} unidades</span>
+                        {% else %}
+                            <span class="badge text-bg-secondary">Producto agotado</span>
+                        {% endif %}
+                    </div>
+                </article>
+            </div>
+        {% empty %}
+            <div class="col">
+                <p class="alert alert-info mb-0">No encontramos productos con ese nombre.</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

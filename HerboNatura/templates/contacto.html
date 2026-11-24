@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block titulo %}Contacto | Herbo Natura{% endblock %}
+{% block descripcion %}Contacta con Herbo Natura{% endblock %}
+
+{% block contenido %}
+    <section class="card border-0 shadow-sm">
+        <div class="card-body p-4 p-md-5">
+            <h1 class="h2 text-success mb-3">Contacto</h1>
+            <p class="lead">{{ mensaje }}</p>
+            <p class="mb-0">
+                <i class="bi bi-envelope me-2" aria-hidden="true"></i>
+                Escríbenos a
+                <a href="mailto:{{ correo }}">{{ correo }}</a>
+            </p>
+        </div>
+    </section>
+{% endblock %}

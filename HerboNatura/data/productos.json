@@ -1,0 +1,51 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "Melisa",
+        "categoria": "Hierbas para infusión",
+        "precio": 3990,
+        "stock": 15,
+        "descripcion": "Hojas de melisa deshidratadas para preparar infusiones."
+    },
+    {
+        "id": 2,
+        "nombre": "Manzanilla",
+        "categoria": "Hierbas para infusión",
+        "precio": 2990,
+        "stock": 20,
+        "descripcion": "Flores de manzanilla seleccionadas."
+    },
+    {
+        "id": 3,
+        "nombre": "Valeriana",
+        "categoria": "Hierbas naturales",
+        "precio": 4990,
+        "stock": 8,
+        "descripcion": "Raíz de valeriana deshidratada."
+    },
+    {
+        "id": 4,
+        "nombre": "Lavanda",
+        "categoria": "Hierbas aromáticas",
+        "precio": 3590,
+        "stock": 0,
+        "descripcion": "Flores secas de lavanda."
+    },
+    {
+        "id": 5,
+        "nombre": "Menta",
+        "categoria": "Hierbas para infusión",
+        "precio": 2590,
+        "stock": 12,
+        "descripcion": "Hojas de menta deshidratadas."
+    },
+    {
+        "id": 6,
+        "nombre": "Boldo",
+        "categoria": "Hierbas naturales",
+        "precio": 3290,
+        "stock": 10,
+        "descripcion": "Hojas de boldo para preparar infusiones."
+    }
+]

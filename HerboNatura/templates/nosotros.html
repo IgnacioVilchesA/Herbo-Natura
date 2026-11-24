@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block titulo %}Nosotros | Herbo Natura{% endblock %}
+{% block descripcion %}Conoce la misión y visión de Herbo Natura{% endblock %}
+
+{% block contenido %}
+    <section class="p-4 p-md-5 mb-4 bg-white rounded-3 shadow-sm">
+        <h1 class="display-6 fw-bold">Sobre {{ nombre_tienda }}</h1>
+        <p class="lead mb-0">Creemos en el bienestar y en el conocimiento de las plantas naturales.</p>
+    </section>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <article class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="h4 text-success"><i class="bi bi-heart-pulse me-2"></i>Nuestra misión</h2>
+                    <p class="mb-0">{{ mision }}</p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="h4 text-success"><i class="bi bi-eye me-2"></i>Nuestra visión</h2>
+                    <p class="mb-0">{{ vision }}</p>
+                </div>
+            </article>
+        </div>
+    </div>
+{% endblock %}

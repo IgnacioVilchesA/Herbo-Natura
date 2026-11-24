@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Inicio | Herbo Natura{% endblock %}
+{% block descripcion %}Herbo Natura: bienestar y naturaleza{% endblock %}
+
+{% block contenido %}
+    <section class="card border-0 shadow-sm overflow-hidden mb-4">
+        <div class="row g-0 align-items-center">
+            <div class="col-lg-7">
+                <img
+                    src="{% static 'img/Inicio.png' %}?v={{ inicio_image_version }}"
+                    class="img-fluid w-100"
+                    alt="Ilustración de Herbo Natura con plantas medicinales y hierbas naturales"
+                >
+            </div>
+            <div class="col-lg-5">
+                <div class="card-body p-4 p-md-5">
+                    <h1 class="display-5 fw-bold">Bienvenido</h1>
+                    <p class="lead">{{ descripcion }}</p>
+                    <p class="mb-0">
+                        Encuentra plantas medicinales, hierbas naturales y productos para cuidar tu bienestar.
+                        ¡Todo lo natural que necesitas en un solo lugar!
+                    </p>
+                    <a class="btn btn-success mt-4" href="{% url 'catalogo' %}">
+                        Explorar catálogo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
